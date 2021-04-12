@@ -4,10 +4,10 @@ AIRPORT SCOREBOARD PROJECT
 ## [react-redux-airport-scoreboard]()
 
 # There are possibilities to run:
-## ```npm start
+## `npm start`
 Which will run the app in the dev mode;
 
-## ```npm run build
+## `npm run build`
 Which will build the app for production in the 'build' folder;
 
 # Tech stack:
