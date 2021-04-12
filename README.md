@@ -1,8 +1,7 @@
 AIRPORT SCOREBOARD PROJECT
 =====================
 # Find it on
-## [
-react-redux-airport-scoreboard]()
+## [react-redux-airport-scoreboard]()
 
 # There are possibilities to run:
 ## npm start
@@ -23,4 +22,4 @@ Which will build the app for production in the 'build' folder;
 * WebPack
 * REST API
 
-### Author: [Ihor Kychak] (https://www.linkedin.com/in/ihor-kychak-64a9ab160/)
+### Author: [Ihor Kychak](https://www.linkedin.com/in/ihor-kychak-64a9ab160/)
