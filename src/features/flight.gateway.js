@@ -1,11 +1,9 @@
 import moment from 'moment';
 
-const baseUrl = 'https://api.iev.aero/api/flights';
-
-const today = moment().format('DD-MM-YYYY');
-
 export const fetchFlightsList = () =>
-  fetch(`${baseUrl}/${today}`)
+  fetch(
+    `${'https://api.iev.aero/api/flights'}/${moment().format('DD-MM-YYYY')}`,
+  )
     .then(response => {
       if (response.ok) {
         return response.json();
