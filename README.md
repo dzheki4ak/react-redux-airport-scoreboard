@@ -1,7 +1,6 @@
 AIRPORT SCOREBOARD PROJECT
 =====================
-# Find it on
-## [react-redux-airport-scoreboard]()
+# Find it on ## [react-redux-airport-scoreboard]()
 
 # There are possibilities to run:
 ## `npm start`
