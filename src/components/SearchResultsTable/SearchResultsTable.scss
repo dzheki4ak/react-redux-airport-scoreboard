@@ -1,0 +1,26 @@
+.search__results {
+  display: flex;
+  justify-content: center;
+
+  &-container {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color: #fff;
+  }
+
+  &-table {
+    width: 100%;
+    border-spacing: 0;
+  
+    &__header {
+      padding: 16px 10px;
+      height: 60px;
+      text-align: left;
+      color: #95989a;
+      background-color: #fff;
+    }
+  }
+}
+
+

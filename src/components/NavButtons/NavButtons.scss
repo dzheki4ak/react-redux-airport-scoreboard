@@ -1,0 +1,64 @@
+.nav__tabs {
+  &-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-block {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    background-color: #e7efec;
+  }
+
+  &-link {
+    height: 60px;
+    width: 50%;
+    background-color: #1eb7ee;
+    opacity: 50%;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+
+    &:hover {
+      opacity: 100%;
+      transition: 500ms;
+    }
+  }
+}
+
+.arrivals {
+  text-align: right;
+  border-bottom-left-radius: 100%;
+  border-top-right-radius: 90%;
+  padding-right: 190px;
+}
+
+.departures {
+  border-bottom-right-radius: 100%;
+  border-top-left-radius: 90%;
+  padding-left: 190px;
+}
+
+.active-dep,
+.active-arr {
+  color: #1eb7ee;
+  background-color: #fff;
+  opacity: 100%;
+  cursor: no-drop;
+}
+
+.active-dep {
+  border-bottom-right-radius: 0;
+}
+
+.active-arr {
+  border-bottom-left-radius: 0;
+}
+
+.land {
+  transform: rotate(90deg);
+}
