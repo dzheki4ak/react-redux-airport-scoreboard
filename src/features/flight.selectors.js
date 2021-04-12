@@ -1,5 +1,3 @@
-import { createSelector } from 'reselect';
-
 export const departuresSelector = state =>
   state.flightsList.departures.filter(
     flight =>

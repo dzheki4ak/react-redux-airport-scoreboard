@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './NavButtons.scss';
 import {
   switchActiveTabDepAction,
@@ -38,6 +39,13 @@ const NavButtons = ({
     </div>
   </div>
 );
+
+NavButtons.propTypes = {
+  arrivalsActive: PropTypes.func.isRequired,
+  departuresActive: PropTypes.func.isRequired,
+  arrActiveTab: PropTypes.bool,
+  depActiveTab: PropTypes.bool,
+};
 
 const mapDispatch = {
   arrivalsActive: switchActiveTabArrAction,

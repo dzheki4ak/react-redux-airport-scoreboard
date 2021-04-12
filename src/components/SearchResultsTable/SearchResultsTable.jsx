@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './SearchResultsTable.scss';
 import {
   arriveTabSelector,
@@ -7,6 +8,7 @@ import {
 } from '../../features/flight.selectors';
 import SearchResultsArrivals from '../SearchResults/SearchResultsArrivals.jsx';
 import SearchResultsDepartures from '../SearchResults/SearchResultsDepartures.jsx';
+
 
 const SearchResultsTable = ({ activeArrTab, activeDepTab }) => {
   if (activeArrTab || activeDepTab) {
@@ -39,6 +41,11 @@ const SearchResultsTable = ({ activeArrTab, activeDepTab }) => {
   }
   return null;
 };
+
+SearchResultsTable.propTypes = {
+  activeArrTab: PropTypes.bool,
+  activeDepTab: PropTypes.bool,
+}
 
 const mapState = state => ({
   activeArrTab: arriveTabSelector(state),

@@ -1,11 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './SearchInput.scss';
 
 import { searchedValueSelector } from '../../features/flight.selectors';
-import { handleSearchValueAtction, switchActiveTabDepAction } from '../../features/flight.actions';
+import {
+  handleSearchValueAtction,
+  switchActiveTabDepAction,
+} from '../../features/flight.actions';
 
-const SearchInput = ({ searchedValueProp, handleSearchedValueProp, handleSwitchActiveTabDepActionProp }) => (
+const SearchInput = ({
+  searchedValueProp,
+  handleSearchedValueProp,
+  handleSwitchActiveTabDepActionProp,
+}) => (
   <div className="flight__search-block">
     <div className="flight__search-field">
       <h2 className="flight__search-header">search flight</h2>
@@ -33,13 +41,19 @@ const SearchInput = ({ searchedValueProp, handleSearchedValueProp, handleSwitchA
   </div>
 );
 
+SearchInput.propTypes = {
+  searchedValueProp: PropTypes.string,
+  handleSearchedValueProp: PropTypes.func.isRequired,
+  handleSwitchActiveTabDepActionProp: PropTypes.func.isRequired,
+}
+
 const mapState = state => ({
   searchedValueProp: searchedValueSelector(state),
 });
 
 const mapDispatch = {
   handleSearchedValueProp: handleSearchValueAtction,
-  handleSwitchActiveTabDepActionProp: switchActiveTabDepAction
+  handleSwitchActiveTabDepActionProp: switchActiveTabDepAction,
 };
 
 export default connect(mapState, mapDispatch)(SearchInput);

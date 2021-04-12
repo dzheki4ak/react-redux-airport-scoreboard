@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import './SearchResults.scss';
+import PropTypes from 'prop-types';
 
 import { getFlightListAction } from '../../features/flight.actions';
 
@@ -18,7 +19,10 @@ const SearchResults = ({ getFlightListActionProp, flightlist }) => {
       status,
       fltNo,
       delay,
+      ID,
     } = flight;
+
+    const direction = timeLandCalc ? 'arrivals' : 'departures';
 
     const factTimeStatus = () => {
       if (status === 'LN') {
@@ -32,8 +36,6 @@ const SearchResults = ({ getFlightListActionProp, flightlist }) => {
       }
       return delay ? 'Delayed' : 'On time';
     };
-
-
 
     return (
       <tr key={flight.ID} className="search__results-table_row">
@@ -68,7 +70,13 @@ const SearchResults = ({ getFlightListActionProp, flightlist }) => {
         </td>
         <td className="search__results-table__data">
           <div>
-            <a className="flight__details" href="#">
+            <a
+              target="_blank"
+              className="flight__details"
+              href={`https://iev.aero/en/${direction}/${ID}?dt=${moment().format(
+                'DD-MM-YYYY',
+              )}`}
+            >
               Flight details
             </a>
           </div>
@@ -80,13 +88,20 @@ const SearchResults = ({ getFlightListActionProp, flightlist }) => {
   if (listToRender.length < 1) {
     return (
       <tr className="search__results-table_row no__flights_tr">
-        <td colSpan="7" className="search__results-table__data no__flights_tr">No flights :(</td>
+        <td colSpan="7" className="search__results-table__data no__flights_tr">
+          No flights :(
+        </td>
       </tr>
-    )
+    );
   }
 
   return listToRender;
 };
+
+SearchResults.propTypes = {
+  getFlightListActionProp: PropTypes.func.isRequired,
+  flightlist: PropTypes.array,
+}
 
 const mapDispatch = {
   getFlightListActionProp: getFlightListAction,
