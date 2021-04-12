@@ -1,5 +1,6 @@
 AIRPORT SCOREBOARD PROJECT
 =====================
+### The airport scoreboard where you're able to search for specific flight as well as all flights arriving/departing today to/from IEV airport;
 # Find it on [react-redux-airport-scoreboard](https://adoring-sinoussi-1e6f22.netlify.app/?#)
 
 # There are possibilities to run:
