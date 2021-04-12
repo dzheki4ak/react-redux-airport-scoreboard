@@ -1,6 +1,6 @@
 AIRPORT SCOREBOARD PROJECT
 =====================
-# Find it on [react-redux-airport-scoreboard](https://adoring-sinoussi-1e6f22.netlify.app/)
+# Find it on [react-redux-airport-scoreboard](https://adoring-sinoussi-1e6f22.netlify.app/?#)
 
 # There are possibilities to run:
 ## `npm start`
